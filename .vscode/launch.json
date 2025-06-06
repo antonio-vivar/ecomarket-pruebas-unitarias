@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MicroserviceEcoMarketApplication",
+            "request": "launch",
+            "mainClass": "com.microservice.ecomarket.MicroserviceEcoMarketApplication",
+            "projectName": "microservice-ecomarket"
+        },
+        {
+            "type": "java",
+            "name": "MicroserviceEcoMarketApplication",
+            "request": "launch",
+            "mainClass": "com.microservice.course.MicroserviceEcoMarketApplication",
+            "projectName": "microservice-ecomarket"
+        },
+        {
+            "type": "java",
             "name": "MicroserviceCourseApplication",
             "request": "launch",
             "mainClass": "com.microservice.course.MicroserviceCourseApplication",

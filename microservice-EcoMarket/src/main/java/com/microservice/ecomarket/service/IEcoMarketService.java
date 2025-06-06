@@ -5,7 +5,7 @@ import com.microservice.ecomarket.http.response.ProductByEcoMarketResponse;
 
 import java.util.List;
 
-public interface IEcoMarketService  {
+public interface IEcoMarketService {
 
     List<EcoMarket> findAll();
 
@@ -13,5 +13,5 @@ public interface IEcoMarketService  {
 
     void save(EcoMarket ecoMarket);
 
-    ProductByEcoMarketResponse  findProductByIdEcoMarket(Long idEcoMarket);
+    ProductByEcoMarketResponse findProductByIdEcoMarket(Long idEcoMarket);
 }

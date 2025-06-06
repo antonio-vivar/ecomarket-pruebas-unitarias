@@ -1,4 +1,4 @@
-package com.microservice.EcoMarket.client;
+package com.microservice.ecomarket.client;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.microservice.EcoMarket.dto.ProductDTO;
+import com.microservice.ecomarket.dto.ProductDTO;
 
 @FeignClient(name = "msvc-product", url = "localhost:8090")
 public interface ProductClient {

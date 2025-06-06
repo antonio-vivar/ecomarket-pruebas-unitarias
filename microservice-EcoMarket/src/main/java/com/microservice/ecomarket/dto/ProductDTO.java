@@ -3,9 +3,9 @@ package com.microservice.ecomarket.dto;
 
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data
