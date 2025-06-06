@@ -37,15 +37,15 @@ public class EcoMarketServiceImpl implements IEcoMarketService {
 
     @Override
     public ProductByEcoMarketResponse findProductByIdEcoMarket(Long idEcoMarket) {
-        // Consultar el ecomarket
-        EcoMarket ecoMarket = ecoMarketRepository.findById(idEcoMarket).orElse(new EcoMarket());
+        // Consultar la sucursal (antes EcoMarket)
+        EcoMarket sucursal = ecoMarketRepository.findById(idEcoMarket).orElse(new EcoMarket());
 
-        // Obtener los productos asociados
+        // Obtener los productos asociados a la sucursal
         List<ProductDTO> productDTOList = productClient.findAllProductByEcoMarket(idEcoMarket);
 
         return ProductByEcoMarketResponse.builder()
-                .ecoMarketName(ecoMarket.getName())
-                .teacher(ecoMarket.getTeacher())
+                .ecoMarketName(sucursal.getNombre()) // Antes getName()
+                .jefeNombre(sucursal.getJefeNombre())          // Antes getTeacher()
                 .productDTOList(productDTOList)
                 .build();
     }
