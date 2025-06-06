@@ -50,7 +50,7 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>3.3.11</version>
-        </plugin>        
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>

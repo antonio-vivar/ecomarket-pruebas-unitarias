@@ -1,8 +1,8 @@
 package com.microservice.product.service;
 
-import com.microservice.product.model.Product;
-
 import java.util.List;
+
+import com.microservice.product.model.Product;
 
 public interface IProductService {
 
@@ -12,6 +12,6 @@ public interface IProductService {
     
     void save(Product product);
 
-    List<Product> findByIdCourse(Long idCourse);
+    List<Product> findProductByIdEcoMarket(Long idEcoMarket);
 
 }

@@ -28,7 +28,7 @@ public class Product {
     private Integer stock;
         
 
-    @Column(name = "course_id")
-    private Long courseId; //Parametro por el que yo voy a buscar en el otro microservicio
+    @Column(name = "ecomarket_id")
+    private Long ecoMarketId; //Parametro por el que yo voy a buscar en el otro microservicio
 
 }

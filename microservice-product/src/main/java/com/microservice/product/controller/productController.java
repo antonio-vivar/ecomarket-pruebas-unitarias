@@ -46,10 +46,10 @@ public class productController {
     }
 
     //localhost:8090/api/v1/product/search-by-course/1
-    @GetMapping("/search-by-course/{courseId}")
-    public ResponseEntity<?> findByIdCourse(@PathVariable Long courseId){
-         System.out.println("-------------------------------------------------------------------"+ courseId);
-         return ResponseEntity.ok(iProductService.findByIdCourse(courseId));
+    @GetMapping("/search-EcoMarket/{idEcoMarket}")
+    public ResponseEntity<?> findProductByIdEcoMarket(@PathVariable Long idEcoMarket){
+         System.out.println("-------------------------------------------------------------------"+ idEcoMarket);
+         return ResponseEntity.ok(iProductService.findProductByIdEcoMarket(idEcoMarket));
     }
 
 }

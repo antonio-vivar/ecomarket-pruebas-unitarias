@@ -32,9 +32,9 @@ public class ProductServiceImpl implements IProductService{
     }
 
     @Override
-    public List<Product> findByIdCourse(Long idCourse) {
+    public List<Product> findProductByIdEcoMarket(Long idEcoMarket) {
         //Este es el que creamos con la notación query o con el nombre del metodo
-        return productRepository.findAllProduct(idCourse);
+        return productRepository.findAllProduct(idEcoMarket);
     }
 
 }
