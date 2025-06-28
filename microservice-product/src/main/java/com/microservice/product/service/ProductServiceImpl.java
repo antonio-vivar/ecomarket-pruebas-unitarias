@@ -30,7 +30,11 @@ public class ProductServiceImpl implements IProductService{
     public void save(Product product) {
         productRepository.save(product);
     }
-
+    @Override
+    public void delete(Long id) {
+    productRepository.deleteById(id);
+    }
+    
     @Override
     public List<Product> findProductByIdEcoMarket(Long idEcoMarket) {
         //Este es el que creamos con la notación query o con el nombre del metodo

@@ -15,7 +15,5 @@ public interface ProductRepository extends JpaRepository<Product,Long>{
     @Query("SELECT s FROM Product s WHERE s.ecoMarketId = :ecoMarketId")
     List<Product> findAllProduct(Long ecoMarketId);
 
-    //Query Method
-    //List<Product> findAllByCourseId(Long courseId);
 
 }

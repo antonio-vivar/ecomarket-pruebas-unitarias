@@ -13,5 +13,8 @@ public interface IEcoMarketService {
 
     void save(EcoMarket ecoMarket);
 
+    void delete(Long id);
+
+
     ProductByEcoMarketResponse findProductByIdEcoMarket(Long idEcoMarket);
 }

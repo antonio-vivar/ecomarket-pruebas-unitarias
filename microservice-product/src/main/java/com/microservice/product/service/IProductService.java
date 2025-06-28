@@ -12,6 +12,8 @@ public interface IProductService {
     
     void save(Product product);
 
+    void delete(Long id);
+
     List<Product> findProductByIdEcoMarket(Long idEcoMarket);
 
 }

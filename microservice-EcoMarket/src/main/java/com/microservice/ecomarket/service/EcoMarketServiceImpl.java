@@ -34,6 +34,11 @@ public class EcoMarketServiceImpl implements IEcoMarketService {
     public void save(EcoMarket ecoMarket) {
         ecoMarketRepository.save(ecoMarket);
     }
+    
+    @Override
+    public void delete(Long id) {
+    ecoMarketRepository.deleteById(id);
+    }
 
     @Override
     public ProductByEcoMarketResponse findProductByIdEcoMarket(Long idEcoMarket) {
