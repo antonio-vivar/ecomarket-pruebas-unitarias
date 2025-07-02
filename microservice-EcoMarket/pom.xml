@@ -76,6 +76,11 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.6.0</version><!--Agrege dependencia swagger-->
         </dependency>
+		<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 	<dependencyManagement>
 		<dependencies>
