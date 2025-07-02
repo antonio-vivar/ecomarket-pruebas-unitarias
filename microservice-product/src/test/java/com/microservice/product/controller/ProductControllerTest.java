@@ -11,13 +11,14 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import java.math.BigDecimal;
-import java.util.Optional;
+import java.util.Arrays;
+import java.util.List;
 
+import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(ProductController.class)
-class ProductControllerTest {
+public class ProductControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -26,18 +27,16 @@ class ProductControllerTest {
     private ProductService productService;
 
     @Test
-    void testGetProductById() throws Exception {
-        Product product = new Product();
-        product.setId(1L);
-        product.setName("Test Product");
-        product.setPrice(new BigDecimal("19.99"));
+    public void testGetAllProducts() throws Exception {
+        Product product1 = new Product(1L, "Producto 1", "Descripción 1", 10.0, 100);
+        Product product2 = new Product(2L, "Producto 2", "Descripción 2", 20.0, 200);
+        List<Product> productList = Arrays.asList(product1, product2);
 
-        Mockito.when(productService.getProductById(1L)).thenReturn(Optional.of(product));
+        given(productService.getAllProducts()).willReturn(productList);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/products/1")
-                .accept(MediaType.APPLICATION_JSON))
+        mockMvc.perform(MockMvcRequestBuilders.get("/products")
+                        .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("Test Product"))
-                .andExpect(jsonPath("$.price").value(19.99));
+                .andExpect(jsonPath("$.size()").value(productList.size()));
     }
 }
